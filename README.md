@@ -2,10 +2,9 @@ A sample Flutter web project for using on GitHub Codespaces.
 
 In order to use debugging, you'll need to use Chrome with the [Dart Debug extension](https://chrome.google.com/webstore/detail/dart-debug-extension/eljbmlghnomdjgdjmbdekegdkbabckhm?hl=en) installed.
 
-// TODO(dantup): This does not work because of proxy/authentication issues:
+**This currently only works if the exposed ports are made Public. Use this at your own risk!**
 
-Access to fetch at 'https://improved-garbanzo-abcdefghijkl-40019.app.github.dev/$dwdsExtensionAuthentication' from origin 'chrome-extension://eljbmlghnomdjgdjmbdekegdkbabckhm' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
-
+- Ensure `[*.]github.dev` is allowed to open popups in Chrome
 - Fork this repo
 - Open your fork on github.com
 - Click the green "Code" button and then "Create Codespace"
@@ -13,8 +12,9 @@ Access to fetch at 'https://improved-garbanzo-abcdefghijkl-40019.app.github.dev/
 - When prompted, click "Run pub get"
 - Ensure the "Web Server" is selected in the status bar
 - Press `F5` to start launching the app
-- If you see "Popup Blocked" in the Chrome address bar, click the notification then on the link to open the page manually
+- Wait for the new tab to spawn to run the app and drag the tab out into its own window
+- Switch back to the VS Code editor tab and under Ports make the exposed ports public
+- Switch back to the app tab
+- Reload the page and wait for the Dart Debug Extension icon to turn blue
 - Click on the Dart Debug Extension icon
-- Wait for the "Autentication Success" page, then close that tab
-- Reload the app page (?)
-- Click on the Dart Debug Extension icon again
+
